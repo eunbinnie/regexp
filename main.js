@@ -1,5 +1,5 @@
 const str = `
-010-1234-5678
+010-1234-5678.
 thesecon@gmail.com
 https://www.omdbapi.com/?apikey=7035c60c&s=frozen
 The quick brown fox jumps over the lazy dog.
@@ -15,6 +15,7 @@ abbcccdddd
   console.log(str.match(regexp));
 
 }
+console.log("====================");
 
 
 // 메소드
@@ -31,5 +32,17 @@ abbcccdddd
   // str=str.replace(regexp2,'AAA')
   // console.log(str)
   // : 이러면 원본 수정됨
+
+}
+console.log("====================");
+
+
+
+// 플래그(옵션)
+{
+
+  console.log(str.match(/the/g)); // ['the', 'the']
+  console.log(str.match(/the/gi));  // ['the', 'The', 'the']
+  console.log(str.match(/\.$/gim)); // ['.', '.']
 
 }
